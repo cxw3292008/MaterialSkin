@@ -36,23 +36,6 @@
             Theme = Themes.LIGHT;
             ColorScheme = new ColorScheme(Primary.Indigo500, Primary.Indigo700, Primary.Indigo100, Accent.Pink200, TextShade.WHITE);
 
-            // Create and cache Roboto fonts
-            // Thanks https://www.codeproject.com/Articles/42041/How-to-Use-a-Font-Without-Installing-it
-            // And https://www.codeproject.com/Articles/107376/Embedding-Font-To-Resources
-
-            // Add font to system table in memory and save the font family
-            addFont(Resources.Roboto_Thin);
-            addFont(Resources.Roboto_Light);
-            addFont(Resources.Roboto_Regular);
-            addFont(Resources.Roboto_Medium);
-            addFont(Resources.Roboto_Bold);
-            addFont(Resources.Roboto_Black);
-
-            RobotoFontFamilies = new Dictionary<string, FontFamily>();
-            foreach (FontFamily ff in privateFontCollection.Families.ToArray())
-            {
-                RobotoFontFamilies.Add(ff.Name.Replace(' ', '_'), ff);
-            }
 
             // create and save font handles for GDI
                        logicalFonts = new Dictionary<string, IntPtr>(18);
@@ -310,7 +293,6 @@
 
         // Font stuff
         private Dictionary<string, IntPtr> logicalFonts;
-        private Dictionary<string, FontFamily> RobotoFontFamilies;
 
 
         private PrivateFontCollection privateFontCollection = new PrivateFontCollection();
