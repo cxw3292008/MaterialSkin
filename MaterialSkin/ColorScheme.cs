@@ -57,6 +57,30 @@
             AccentBrush = new SolidBrush(AccentColor);
             TextBrush = new SolidBrush(TextColor);
         }
+        
+        public ColorScheme(Color primary, Color darkPrimary, Color lightPrimary, Color accent, Color textShade)
+        {
+            //Color
+            PrimaryColor = primary;
+            DarkPrimaryColor = darkPrimary;
+            LightPrimaryColor = lightPrimary;
+            AccentColor = accent;
+            TextColor = textShade;
+
+            //Pen
+            PrimaryPen = new Pen(PrimaryColor);
+            DarkPrimaryPen = new Pen(DarkPrimaryColor);
+            LightPrimaryPen = new Pen(LightPrimaryColor);
+            AccentPen = new Pen(AccentColor);
+            TextPen = new Pen(TextColor);
+
+            //Brush
+            PrimaryBrush = new SolidBrush(PrimaryColor);
+            DarkPrimaryBrush = new SolidBrush(DarkPrimaryColor);
+            LightPrimaryBrush = new SolidBrush(LightPrimaryColor);
+            AccentBrush = new SolidBrush(AccentColor);
+            TextBrush = new SolidBrush(TextColor);
+        }
     }
 
     //Color constants
